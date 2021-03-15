@@ -84,7 +84,7 @@ body{
 .form__container{ 
   padding: 1rem 2rem;
   background-image: linear-gradient(105deg , var(--white) 0%, var(--white) 50%, transparent 50%), url(./img/section__img.jpg);
-  height: 25rem;
+  height: 30rem;
   background-position: center;
   background-size: contain;
   background-size: 100%;
@@ -112,6 +112,7 @@ body{
   font-weight: 700;
   background-image: linear-gradient(to right, var(--color_primary) , var(--color_secondary));
   -webkit-background-clip: text;
+  background-clip: text ;
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s;
@@ -120,10 +121,6 @@ body{
 .form__heading > h2:hover {
   transform: skewY(1deg) skewX(15deg);
   text-shadow: .5rem 1rem 2rem rgba( var(--black), .2);
-}
-
-.form__group{
-
 }
 
 .form__group :not(:last-child) {
@@ -141,7 +138,7 @@ body{
   border: none;
   border-bottom: 3px solid transparent;
   width: 30%;
-  box-shadow: 5px 5px 5px 5px #110a0a1c;
+  box-shadow: 0px 5px 5px 5px #110a0a3b;
 }
 .form__input:focus {
   outline: none;
@@ -164,3 +161,48 @@ body{
   display: block;
   transition: all .3s;
 }
+
+.btn__submit{
+  margin-top: 2rem;
+   text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn__submit:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(#000000,0.2);
+}
+.btn__submit:hover::after{
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+}
+.btn__submit:active{
+      transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(#000000,0.2);
+}
+.btn__submit::after{
+      content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn {
+    background-color: rgb(236, 19, 19);
+    color: #fff;
+}
+.btn ::after {
+  background-color: rgb(236, 19, 19);   
+}
+
