@@ -5,45 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="./src/thumb.css">
-    <title>Pictures</title>
+    <title>Thumbnail Image | Sports On</title>
     
 </head>
 <body>
+    <header>
+        <div class="nav-bar-container">
+            <div class="nav-bar-logo">
+                <img src="./src/Image/Shutterstock_Lisa_Kolbasa.jpg" alt="Icon" width="50px" height="50px">
+                <a id="logo-title" class="to-home">SPORTS ON</a>
+            </div>
+            <div class="nav-bar-tabs">
+                <ul class="nav-bar-tabs-list">
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="./thumb.html">Thumbnail Image</a>
+                    </li>
+                    
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="#">Quiz</a>
+                    </li>
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="./Site Map.html" target="_blank">Site Map</a>
+                    </li>
+                  
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <div class="dropdown">
+                        <a class="nav-link">Articles</a>
+                        <div class="dropdown-content">
+                            <a href="#">Student1</a>
+                            <a href="#">Student2</a>
+                            <a href="#">Student3</a>
+                            <a href="#">Student4</a>
+                        </div>
+                    </div>
     
-    <div class="container">
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" id="container_thumb">
         <div class="heading">
-            <h1 class="firstHeading"><span>Sports Product</span></h1>
+            <h1 class="firstHeading"><span> Gallery of Sports On</span></h1>
            <h4 class="tagline"> We kick it where it counts </h4>
         </div>
         <div class="box">
             <div class="imagebox">
                 <img id="imgbox" src="./src/Image/badminton.jfif" alt="Badminton Rackets" />
             </div>   
-            <div class="content">
-                <h2 id ="picHeading">Badmintion</h2>
-                <p id="picContent">
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
-                    by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-                    of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum 
-                    generators on the Internet tend to repeat predefined chunks as necessary, making this 
-                    the first true generator on the Internet.It uses a dictionary of over 200 Latin words, combined with a 
-                    handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum
-                    is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                </p>
+            
+            <div class="content active ">
+                <div class="img">
+                    <h2 id ="picHeading">Badmintion</h2>
+                    <p id="picContent">
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, 
+                        by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
+                        of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum 
+                        generators on the Internet tend to repeat predefined chunks as necessary, making this 
+                        the first true generator on the Internet.It uses a dictionary of over 200 Latin words, combined with a 
+                        handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum
+                        is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </p>
+                </div>
+
+                <div class="img" class="hidden">
+                    <h2 class="">Game one</h2>
+                    <p id="picContent">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus 
+                         voluptatum ratione fuga magnam quasi sed corrupti! Minus numquam 
+                         obcaecati dolor.
+    
+                    </p>
+                </div>
             </div>    
         </div>
         <div class="wrapper">
                 <ul class="thumb">
-                    <div class="Item"><li id="img_1" ><a href="#img-1"> <img src="./src/Image/badminton.jfif" alt="Badmintion Image" onclick="Enlargeimage(this); "> </a></li></div>
-                    <div class="Item"><li id="img_2" ><a href="#img-2"> <img src="./src/Image/cricket.jfif" alt="Cricket Shoes Image" onclick="Enlargeimage(this);"> </a></li></div>
+                    <div class="Item"><li id="img_1" ><a href="#img-1"> <img src="./src/Image/badminton.jfif" alt="Badmintion Image" onclick="Enlargeimage(this,'img',1); "> </a></li></div>
+                    <div class="Item"><li id="img_2" ><a href="#img-2"> <img src="./src/Image/cricket.jfif" alt="Cricket Shoes Image" onclick="Enlargeimage(this,'img',2);"> </a></li></div>
                     <div class="Item"><li id="img_3" ><a href="#img-3"> <img src="./src/Image/football.jfif" alt="Fottball Image" onclick="Enlargeimage(this);"> </a></li></div>
                     <div class="Item"><li id="img_4" ><a href="#img-4"> <img src="./src/Image/golf.jfif" alt="Golf Image"  onclick="Enlargeimage(this);" > </a></li></div>
                     <div class="Item"><li id="img_5" ><a href="#img-5"> <img src="./src/Image/tennis.jfif" alt="Tennis  Image"  onclick="Enlargeimage(this);"> </a></li></div>
                     <div class="Item"><li id="img_5" ><a href="#img-5"> <img src="./src/Image/yoga.jfif" alt="Yoga Equipments Image"  onclick="Enlargeimage(this);"> </a></li></div>
                 </ul>
         </div>
-    
-
     </div>
 <script src="./src/thumb.js"></script>
 </body>
