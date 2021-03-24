@@ -20,29 +20,73 @@
 	<div class="query" id="query">
 		
 		<p> Make a Query </p>
-		<form>
+		<form action="mailto:sivakumarthanuraj1@gmail.com" method="POST" enctype="multipart/form-data" name="emailform" onsubmit="return validateForm()" onclick = "openFrm(this)">
 		<label for="Name">Name:</label></br>
 		<input type="text" id="name" name="name" placeholder="Your Name Here"></br>
 		<label for="Email">Email:</label></br>
 		<input type="email" id="email" name="email" placeholder="Your Email Here"></br>
 		<label for="Address">Address:</label></br>
-		<textarea></textarea></br>
+		<textarea name="address"></textarea></br>
 			
 		<label for="Subject" >Subject</label></br>
-			<select>
+			<select name="subject">
 			<option value="Cost">Cost</option>
 			<option value="Package">Package</option>
 			<option value="Delievery">Delievery</option>
 			</select>
 		<label for="Query">Query message:</label></br>
-		<textarea></textarea></br>
+		<textarea name="query"></textarea></br>
 			<input type="submit" value="Submit"></br>
 		</form>
 	</div>
+	
+			<div class="container">
+			  <div id="frmtext"></div>
+			</div>
 	
 	<div class="footer" id="footer">
 		<br>
 		<center><p>Copyright © 2020 Sport LK. All rights reserved.</p></center>
 	</div>
+	<!--Java Script --><script>
+	function openFrm() {
+	var data = "";
+  var frmText = document.getElementById("frmtext");
+  data += "Name : " + document.forms["emailform"]["name"].value;
+  data += "<br>Email : " + document.forms["emailform"]["email"].value;
+  data += "<br>Subject : " + document.forms["emailform"]["subject"].value;
+  data += "<br>Query : " + document.forms["emailform"]["query"].value;
+  frmText.innerHTML = data;
+  frmText.parentElement.style.display = "block";
+}
+
+function validateForm() {
+  var x = document.forms["emailform"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+    var x = document.forms["emailform"]["email"].value;
+  if (x == "") {
+    alert("email must be filled out");
+    return false;
+  }
+    var x = document.forms["emailform"]["address"].value;
+  if (x == "") {
+    alert("Address must be filled out");
+    return false;
+  }
+    var x = document.forms["emailform"]["subject"].value;
+  if (x == "") {
+    alert("subject must be filled out");
+    return false;
+  }
+    var x = document.forms["emailform"]["query"].value;
+  if (x == "") {
+    alert("query must be filled out");
+    return false;
+  }
+}
+</script>
 	</body>
 </html>
