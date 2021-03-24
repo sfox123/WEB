@@ -8,7 +8,7 @@
     <title>Thumbnail Image | Sports On</title>
     
 </head>
-<body>
+<body id="bg-colour">
     <header>
         <div class="nav-bar-container">
             <div class="nav-bar-logo">
@@ -30,10 +30,11 @@
                     <li class="nav-bar-tab-item">
                         <a class="nav-link" href="#">Quiz</a>
                     </li>
-                    <li class="nav-bar-tab-item">
-                        <a class="nav-link" href="./Site Map.html" target="_blank">Site Map</a>
-                    </li>
                   
+                    <li class="nav-bar-tab-item">
+                        <a class="nav-link" href="./Site Map.html">Site Map</a>
+                    </li>
+    
                     <li class="nav-bar-tab-item">
                         <a class="nav-link" href="#">About Us</a>
                     </li>
@@ -43,10 +44,9 @@
                             <a href="#">Student1</a>
                             <a href="#">Student2</a>
                             <a href="#">Student3</a>
-                            <a href="#">Student4</a>
+                            <a href="./Student4.html" target="_blank">Student4</a>
                         </div>
                     </div>
-    
             </div>
         </div>
     </header>
@@ -56,6 +56,18 @@
             <h1 class="firstHeading"><span> Gallery of Sports On</span></h1>
            <h4 class="tagline"> We kick it where it counts </h4>
         </div>
+
+        <div class="pull-down">
+            <label for="color-select" > Background  Colour :  </label>
+            <select  onchange="color(this.value)" name="color-select" id="color-select">
+                <option value="black">Black</option>
+                <option value="rgb(143, 18, 95)">Purple</option>
+                <option value="rgb(17, 141, 108)">Blue</option>
+                <option value="rgb(132, 204, 49)">Green</option>
+            </select>
+        </div>
+        
+
         <div class="box">
             <div class="imagebox">
                 <img id="imgbox" src="./src/Image/badminton.jfif" alt="Badminton Rackets" />
@@ -141,6 +153,7 @@
                 </ul>
         </div>
     </div>
+
 <script src="./src/thumb.js"></script>
 </body>
 </html>

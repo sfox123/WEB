@@ -5,7 +5,12 @@ function Enlargeimage(img,x) {
   }
   document.getElementById('img_' + x).classList.remove('hidden');
   var src = img.getAttribute('src');
-  document.getElementById("imgbox").setAttribute('src', src).style.backgroundColor;
+  document.getElementById("imgbox").setAttribute('src', src).style.backgroundColor ;
   
 }
 
+function color(value) {
+    document.body.style.background = value;
+    document.body.style.color = 'white';
+
+}
