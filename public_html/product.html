@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./src/style.css">
     <title>Document</title>
+=======
+    <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    <link href='https://css.gg/user-list.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Purchase Item</title>
+>>>>>>> shagar
 </head>
+
 <body>
+<<<<<<< HEAD
 <!-- shagar product page -->
     <section class="section">
         <div class="form__container">
@@ -33,5 +45,144 @@
             </form>
         </div>
     </section>
+=======
+    <nav>
+        <div class="cart">
+            <a class="cart__link" id="cart" href="#popup">
+                <i class="gg-shopping-bag cart__icon"></i>
+                <span class='cart__count'>0</span>
+            </a>
+        </div>
+    </nav>
+    <div class="section__container" id="close">
+        <div class="section__product">
+            <div class="item__container">
+                <h1 class="item__heading">FootBall</h1>
+                <img class='item__img' src="./src/img/football.jpg" alt="football">
+                <h2 class="item__price">Rs.8999</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item__container">
+                <h1 class="item__heading">Cricket Bat</h1>
+                <img src="./src/img/cricket.jpg" alt="cricket" class="item__img">
+                <h2 class="item__price">Rs.6799</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item__container">
+                <h1 class="item__heading">Adidas Shoes</h1>
+                <img src="./src/img/adidas.jpg" alt="cricket" class="item__img">
+                <h2 class="item__price">Rs.9999</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="section__product">
+            <div class="item__container">
+                <h1 class="item__heading">Tennis Ball</h1>
+                <img src="./src/img/tennis.jpg" alt="cricket" class="item__img">
+                <h2 class="item__price">Rs.99</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item__container">
+                <h1 class="item__heading">Tennis Racket</h1>
+                <img src="./src/img/rack.jpg" alt="cricket" class="item__img">
+                <h2 class="item__price">Rs.679</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item__container">
+                <h1 class="item__heading">Hockey Bat</h1>
+                <img src="./src/img/hockey.jpg" alt="cricket" class="item__img">
+                <h2 class="item__price">Rs.239</h2>
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                <div class="item__bottom__button">
+                    <button class=" item__link item__btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="pop">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading">Cart <i class="cart__bag gg-shopping-cart"></i></h1>
+            <h2 class="pop__heading__sub">Items Added</h2>
+            <div id="pop__container">
+            </div>
+            <div class="pop__bottom">
+                <h3 class="pop__total"> </h3>
+                <a href="#form" class="item__link pop__checkout">
+                    Checkout ->
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pop" id="form">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">User Detail <i class="cart__bag gg-user-list"></i></h1>
+            <form action='#close' class="form__list">
+                <label for="name">User name</label>
+                <input type="text" name="name" id="name">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address">
+                <label for="Mobile">Mobile</label>
+                <input type="number" placeholder="* Optional" name="mobile" id="mobile">
+                <button type="submit" class="item__link pop__checkout">Complete Order</button>
+            </form>
+        </div>
+    </div>
+    <div class="pop" id="success">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">Success !!!</h1>
+        </div>
+    </div>
+    <div class="pop" id="empty">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">Cart is Empty !!!</h1>
+        </div>
+    </div>
+<script src="./src/app.js"></script>
+<!-- <button>remove</button> -->
+>>>>>>> shagar
 </body>
+
 </html>
