@@ -4,31 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
     <title>Purchase Item</title>
 </head>
 <body>
-    <div class="section__container">
-        <div class="section__product">
-            <div class="item__container">
-                <h1>Item 1</h1>
-            </div>
-            <div class="item__container">
-                <h1>Item 2</h1>
-            </div>
-            <div class="item__container">
-                <h1>Item 3</h1>
-            </div>
+    <nav>
+        <div class="cart">
+            <a class="cart__link" href="#popup">
+            <i class="gg-shopping-bag cart__icon"></i>
+            <span class='cart__count'>0</span>
+            </a>
         </div>
+    </nav>
+    <div class="section__container" id="close">
         <div class="section__product">
             <div class="item__container">
-                <h1>Item 1</h1>
+                <h1 class="item__heading">FootBall</h1>
+                <img class='item__img' src="./src/img/football.jpg" alt="football">
+                                <div class="item__bottom">
+                                    <a class="item__link item__add">+</a>
+                                    <span class="item__count">1</span>
+                                    <a class="item__link item__sub">-</a>
+                                </div>
+                                <div class="item__bottom__button">
+                                    <button class=" item__link item__btn">Add to Cart</button>
+                                </div>
             </div>
             <div class="item__container">
-                <h1>Item 2</h1>
+                <h1 class="item__heading">Item 29</h1>
+                <img src="./src/img/football.jpg" alt="cricket" class="item__img">
+                <div class="item__bottom">
+                    <a class="item__link item__add">+</a>
+                    <span class="item__count">1</span>
+                    <a class="item__link item__sub">-</a>
+                </div>
+                                                <div class="item__bottom__button">
+                                                    <button class=" item__link item__btn">Add to Cart</button>
+                                                </div>
             </div>
-            <div class="item__container">
-                <h1>Item 3</h1>
+                <div class="item__container">
+                    <h1 class="item__heading">Item 2</h1>
+                    <img src="./src/img/football.jpg" alt="cricket" class="item__img">
+                        <div class="item__bottom">
+                                <a class="item__link item__add">+</a>
+                                  <span class="item__count">1</span>
+                                <a class="item__link item__sub">-</a>
+                         </div>
+                        <div class="item__bottom__button">
+                            <button class=" item__link item__btn">Add to Cart</button>
+                        </div>
+                </div>
+            </div>
+        <div class="section__product">
+                
+                <div class="item__container">
+                    <h1 class="item__heading">Item 2</h1>
+                    <img src="./src/img/football.jpg" alt="cricket" class="item__img">   
+                                    <div class="item__bottom">
+                                        <a class="item__link item__add">+</a>
+                                        <span class="item__count">1</span>
+                                        <a class="item__link item__sub">-</a>
+                                    </div>
+                                            <div class="item__bottom__button">
+                                                <button class=" item__link item__btn">Add to Cart</button>
+                                            </div>
+               </div>
+  
+                <div class="item__container">
+                    <h1 class="item__heading">Item 2</h1>
+                    <img src="./src/img/football.jpg" alt="cricket" class="item__img">
+                                    <div class="item__bottom">
+                                        <a class="item__link item__add">+</a>
+                                        <span class="item__count">1</span>
+                                        <a class="item__link item__sub">-</a>
+                                    </div>
+                                                            <div class="item__bottom__button">
+                                                                <button class=" item__link item__btn">Add to Cart</button>
+                                                            </div>
+               </div>
+                <div class="item__container">
+                    <h1 class="item__heading">Crciekt</h1>
+                    <img src="./src/img/football.jpg" alt="cricket" class="item__img">    
+                                    <div class="item__bottom">
+                                        <a class="item__link item__add">+</a>
+                                        <span class="item__count">1</span>
+                                        <a class="item__link item__sub">-</a>
+                                    </div>
+                                                            <div class="item__bottom__button">
+                                                                <button class=" item__link item__btn">Add to Cart</button>
+                                                            </div>
+                </div>
+            </div>
+    </div>
+    <div id="popup" class="pop">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading">Cart <i class="cart__bag gg-shopping-cart"></i></h1>
+            <h2 class="pop__heading__sub">Items Added</h2>
+            <div class="pop__items">
+                <h1 class="pop__item__name">Item_1</h1>
+                <p class="pop__item__quantity">Quantity : 1</p>
+                <button class="pop__item__remove">Remove</button>
+            </div>
+            <div class="pop__items">
+                <h1 class="pop__item__name">Item_1</h1>
+                <p class="pop__item__quantity">Quantity : 1</p>
+                <button class="pop__item__remove">Remove</button>
+            </div>
+            <div class="pop__items">
+                <h1 class="pop__item__name">Item_1</h1>
+                <p class="pop__item__quantity">Quantity : 1</p>
+                <button class="pop__item__remove">Remove</button>
             </div>
         </div>
     </div>
