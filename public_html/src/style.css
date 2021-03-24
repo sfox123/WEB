@@ -274,6 +274,7 @@ nav {
 .pop__item__remove:active {
   transform: translateY(0);
 }
+<<<<<<< HEAD
 .pop__bottom {
   display: flex;
   justify-content: center;
@@ -293,6 +294,8 @@ nav {
     rgba(0, 212, 255, 1) 100%
   );
 }
+=======
+>>>>>>> backend
 .item__price {
   text-align: center;
   margin-bottom: 2rem;
