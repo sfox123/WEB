@@ -3,7 +3,8 @@
 btnInt();
 
 const cart_count = document.querySelector('.cart__count');
-const cart = {count: 0 ,items: []};  
+const cart = { count: 0, items: [] };
+let total = 0;  
 
 function btnInt() {
     
@@ -35,12 +36,18 @@ function btnInt() {
             evt.path[2].children[3].getElementsByClassName('item__count')[0].innerHTML = 1;
             cartLogic();
         }
+        else if (evt.path[1].getAttribute('id') == 'cart') {
+            console.log(cart.count)
+            cart.count == 0 ? evt.path[1].setAttribute('href', '#empty') : evt.path[1].setAttribute('href', '#popup')
+        }
     });
 }
 
 function cartLogic() {
     
     const container = document.querySelector('#pop__container');
+    const totalDOM = document.querySelector('.pop__total');
+
     for (let item of cart.items) {
         const box = document.createElement('div');
         box.classList.add('pop__items');
@@ -52,15 +59,33 @@ function cartLogic() {
         const sum = document.createElement('p')
         sum.textContent = 'Quantity : ' + item.count +" ||  Price : "+ item.price;
         sum.classList.add('pop__item__quantity');
-        
-        const btn = document.createElement('button')
-        btn.textContent = 'Remove'
-        btn.classList.add('pop__item__remove');
+        total += item.count * item.price;
 
         container.appendChild(box);
         box.appendChild(h1);
         box.appendChild(sum);
-        box.appendChild(btn);
+
     }
+    totalDOM.innerHTML = 'Total : ' + total;
     cart.items = [];
+}
+
+document.addEventListener('submit', (evt) => {
+    let fields = [];
+    evt.preventDefault();
+    const UserName = evt.path[0].querySelectorAll('input')[0].value
+    const address = evt.path[0].querySelectorAll('input')[1].value;
+    fields.push(UserName, address);
+
+    for (el of fields) {
+        el.length == 0 ? evt.path[0].querySelectorAll('input')[fields.indexOf(el)].placeholder = `Field ${fields.indexOf(el) == 0 ? ' User name ' : ' Address '} is Important` : null
+    }
+    UserName.length && address.length != 0 ? reset() : null;
+})
+
+function reset() {
+    window.location.href = '/product.html#success'
+    setTimeout(() => {
+        window.location.href = '/product.html'
+    }, 1000);
 }

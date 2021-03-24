@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://css.gg/shopping-bag.css' rel='stylesheet'>
     <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    <link href='https://css.gg/user-list.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/style.css">
     <title>Purchase Item</title>
@@ -15,7 +16,7 @@
 <body>
     <nav>
         <div class="cart">
-            <a class="cart__link" href="#popup">
+            <a class="cart__link" id="cart" href="#popup">
                 <i class="gg-shopping-bag cart__icon"></i>
                 <span class='cart__count'>0</span>
             </a>
@@ -111,30 +112,44 @@
             <h1 class="pop__heading">Cart <i class="cart__bag gg-shopping-cart"></i></h1>
             <h2 class="pop__heading__sub">Items Added</h2>
             <div id="pop__container">
-            <!-- <div class="pop__items">
-                <h1 class="pop__item__name">Item_1</h1>
-                <p class="pop__item__quantity">Quantity : 1</p>
-                <button class="pop__item__remove">Remove</button>
-            </div>
-            <div class="pop__items">
-                <h1 class="pop__item__name">Item_1</h1>
-                <p class="pop__item__quantity">Quantity : 1</p>
-                <button class="pop__item__remove">Remove</button>
-            </div>
-            <div class="pop__items">
-                <h1 class="pop__item__name">Item_1</h1>
-                <p class="pop__item__quantity">Quantity : 1</p>
-                <button class="pop__item__remove">Remove</button>
-            </div> -->
             </div>
             <div class="pop__bottom">
-                <a href="#" class="item__link pop__checkout">
+                <h3 class="pop__total"> </h3>
+                <a href="#form" class="item__link pop__checkout">
                     Checkout ->
                 </a>
             </div>
         </div>
     </div>
+    <div class="pop" id="form">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">User Detail <i class="cart__bag gg-user-list"></i></h1>
+            <form action='#close' class="form__list">
+                <label for="name">User name</label>
+                <input type="text" name="name" id="name">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address">
+                <label for="Mobile">Mobile</label>
+                <input type="number" placeholder="* Optional" name="mobile" id="mobile">
+                <button type="submit" class="item__link pop__checkout">Complete Order</button>
+            </form>
+        </div>
+    </div>
+    <div class="pop" id="success">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">Success !!!</h1>
+        </div>
+    </div>
+    <div class="pop" id="empty">
+        <div class="pop__content">
+            <a href="#close" class="pop__close">X</a>
+            <h1 class="pop__heading__two">Cart is Empty !!!</h1>
+        </div>
+    </div>
 <script src="./src/app.js"></script>
+<!-- <button>remove</button> -->
 </body>
 
 </html>
