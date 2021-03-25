@@ -88,8 +88,8 @@ function FormSubmit() {
 }
 
 function reset() {
-    window.location.href = '/product.html#success'
+    window.location.href = '/WEB/public_html/product.html#success'
     setTimeout(() => {
-        window.location.href = '/product.html'
+        window.location.href = '/WEB/public_html/product.html'
     }, 1000);
 }

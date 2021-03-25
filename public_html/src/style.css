@@ -53,7 +53,7 @@ body {
 nav {
   position: fixed;
   float: right;
-  top: 2rem;
+  top: 7rem;
   right: 3rem;
 }
 .cart {
@@ -73,7 +73,7 @@ nav {
   transform: translateY(0);
 }
 .gg-shopping-bag {
-  transform: scale(var(--ggs, 2));
+  transform: scale(var(--ggs, 2.2));
 }
 
 .gg-user-list {
