@@ -1,0 +1,53 @@
+:root {
+  --color_primary: rgb(240, 3, 122);
+  --color_secondary: rgba(238, 28, 109, 0.479);
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+.container {
+  padding: 2rem;
+  background-color: #948484d5;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5% 10%;
+  background-color: #fff;
+  padding: 2rem;
+}
+.content > h1 {
+  text-transform: uppercase;
+}
+.content > h1 > span {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+img {
+  border-radius: 50%;
+  display: block;
+  margin-top: 2rem;
+  width: 10rem;
+}
+
+.content__role > h1 {
+  margin-bottom: 1rem;
+}
+.content__final > h1 {
+  margin-bottom: 1rem;
+}
+
+ol > li {
+  margin-bottom: 1rem;
+}
