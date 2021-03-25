@@ -70,18 +70,22 @@ function cartLogic() {
     cart.items = [];
 }
 
-document.addEventListener('submit', (evt) => {
-    let fields = [];
-    evt.preventDefault();
-    const UserName = evt.path[0].querySelectorAll('input')[0].value
-    const address = evt.path[0].querySelectorAll('input')[1].value;
-    fields.push(UserName, address);
+FormSubmit();
 
-    for (el of fields) {
-        el.length == 0 ? evt.path[0].querySelectorAll('input')[fields.indexOf(el)].placeholder = `Field ${fields.indexOf(el) == 0 ? ' User name ' : ' Address '} is Important` : null
-    }
-    UserName.length && address.length != 0 ? reset() : null;
-})
+function FormSubmit() {
+    document.addEventListener('submit', (evt) => {
+        let fields = [];
+        evt.preventDefault();
+        const UserName = evt.path[0].querySelectorAll('input')[0].value;
+        const address = evt.path[0].querySelectorAll('input')[1].value;
+        fields.push(UserName, address);
+
+        for (el of fields) {
+            el.length == 0 ? evt.path[0].querySelectorAll('input')[fields.indexOf(el)].placeholder = `Field ${fields.indexOf(el) == 0 ? ' User name ' : ' Address '} is Important` : null;
+        }
+        UserName.length && address.length != 0 ? reset() : null;
+    });
+}
 
 function reset() {
     window.location.href = '/product.html#success'
