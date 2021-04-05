@@ -1,0 +1,254 @@
+body{
+    background: url(./Image/Fantacy-Soccer-Wallpaper.jpg);
+    background-attachment: fixed;
+}
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-bar-container {
+    background-color: #5754548a;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.nav-bar-logo {
+    padding: 15px;
+}
+#logo-title{
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-decoration: wavy;
+    color: rgb(9, 9, 8);
+    padding: 20px;
+
+}
+
+.nav-bar-tabs {
+    text-align: center;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding: 5px;
+}
+
+.nav-bar-tab-item {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    margin: 5px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #00ff2a;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid red;
+    margin: 5px;
+    transition: 0.5s;
+}
+
+.dropdown {
+    margin-top: 0px;
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    font-size: 18px;
+    font-family: 'Amatic SC', cursive;
+    background-color: #fff;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #30ff07;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.heading{
+    text-align: center;
+    cursor: pointer;
+    padding: 0%;
+    margin: 0%;
+    
+}
+h1,h4{
+    margin: 0%;
+    
+}
+/* Editing the H1 Tag*/
+.heading{
+    top:20%;
+    
+}
+.firstHeading{
+    padding: 20px;
+    color: rgba(65, 65, 167, 0.672);
+    font-size: 50px;
+    font-weight: 700;
+    animation: bounce 4s 1;
+    text-transform: uppercase;
+    
+}
+.tagline{
+    font-size: 18px;
+    color: rgb(9, 45, 46);
+    text-transform: capitalize;
+    
+}
+@keyframes bounce{
+    0%, 20% ,60%,100%{
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    40%{
+        -webkit-transform: translate(-20%);
+        transform: translate(-20%);
+    }
+    80%{
+        -webkit-transform: translate(-10%);
+        transform: translate(-10%);
+    }
+} 
+
+h1:hover{
+   animation: bounce 3s;
+   color: red;
+   zoom: 1;
+}
+
+#imgbox{
+    width:300px;
+    height:300px;
+}
+
+.box{
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:transparent;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display: flex;
+    transition: 5s;
+}
+.imagebox{
+    width: 300px;
+    height: 300px;
+    flex:0 0 300px;
+}
+
+.imagebox:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+#imgbox{
+    max-width: 100%;
+}
+.content{
+    padding-left: 20px;
+}
+.content h2{
+    padding: 0%;
+    margin: 0%;
+    color: crimson;
+    text-align: center;
+    top: 20px;
+}
+.content h2{
+    padding:10% 0 0;
+    margin: 0%;
+    text-align: center;
+    width: 600px;
+}
+
+.wrapper{
+    bottom: 20px;
+}
+
+
+ul.thumb{
+    position:absolute;
+    top: 80%;
+    right: 45%;
+    transform: translate(-50%,-50%);
+    margin: 20%;
+    padding: 10%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: initial;
+    object-fit: cover;
+
+}
+
+ul.thumb li{
+    list-style: none;
+    margin: 0 10%;
+}
+ul.thumb li img{
+    background-color: #fff;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    width: 200px;
+    
+}
+ul.thumb li a{
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    margin: 10px;
+    z-index: 0;
+    position: relative;
+}
+
+ul.thumb li a:after {
+    color: #fff;
+    position: relative;
+    top: 15px;
+  }
+ul.thumb li a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+     transform: scale(1.2);
+     z-index: 20;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
+  }
+  
+  .hidden{
+      display: none;
+      visibility: hidden;
+  }
